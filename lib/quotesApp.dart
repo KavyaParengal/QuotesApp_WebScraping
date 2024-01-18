@@ -51,8 +51,8 @@ class _QuotesAppHomeState extends State<QuotesAppHome> {
           children: [
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.only(top: 50),
-              child: Text("Quotes App",style: TextStyle(
+              margin: const EdgeInsets.only(top: 50),
+              child: const Text("Quotes App",style: TextStyle(
                 fontWeight: FontWeight.w800,
                 color: Colors.black,
                 fontSize: 28
@@ -61,7 +61,7 @@ class _QuotesAppHomeState extends State<QuotesAppHome> {
             GridView.count(
                 crossAxisCount: 2,
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               mainAxisSpacing: 10,
               crossAxisSpacing: 0,
               children: categories.map((category) {
@@ -77,7 +77,7 @@ class _QuotesAppHomeState extends State<QuotesAppHome> {
                         borderRadius: BorderRadius.circular(20)
                       ),
                       child: Center(
-                        child: Text(category.toUpperCase(),style: TextStyle(
+                        child: Text(category.toUpperCase(),style: const TextStyle(
                                   fontWeight: FontWeight.w600,
                                   color: Colors.white,
                           fontSize: 18
@@ -88,28 +88,28 @@ class _QuotesAppHomeState extends State<QuotesAppHome> {
                 );
               }).toList(),
             ),
-            SizedBox(height: 20,),
-            isData==false? Center(child: CircularProgressIndicator(),): ListView.builder(
+            const SizedBox(height: 20,),
+            isData==false? const Center(child: CircularProgressIndicator(),): ListView.builder(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: quotes.length,
                 itemBuilder: (context,index){
                   return Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Card(
                       elevation: 10,
                       child: Column(
                         children: [
                           Padding(
-                              padding: EdgeInsets.only(top: 20,left: 20,bottom: 20),
-                              child: Text(quotes[index],style: TextStyle(
+                              padding: const EdgeInsets.only(top: 20,left: 20,bottom: 20),
+                              child: Text(quotes[index],style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black
                               ),),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(bottom: 8),
+                            padding: const EdgeInsets.only(bottom: 8),
                             child: Text(author[index],style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,

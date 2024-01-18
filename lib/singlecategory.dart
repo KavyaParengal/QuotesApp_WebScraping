@@ -47,38 +47,38 @@ class _SingleCategoryPageState extends State<SingleCategoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
-      body: isData==false? Center(child: CircularProgressIndicator(),): SingleChildScrollView(
-        physics: ScrollPhysics(),
+      body: isData==false? const Center(child: CircularProgressIndicator(),): SingleChildScrollView(
+        physics: const ScrollPhysics(),
         child: Column(
           children: [
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.only(top: 50),
-              child: Text("${widget.categoryname.toUpperCase()} Quotes",style: TextStyle(
+              margin: const EdgeInsets.only(top: 50),
+              child: Text("${widget.categoryname.toUpperCase()} Quotes",style: const TextStyle(
                 fontSize: 25,color: Colors.black,fontWeight: FontWeight.w700
               ),),
             ),
             ListView.builder(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: quotes.length,
                 itemBuilder: (context,index){
                   return Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Card(
                       elevation: 10,
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(top: 20,left: 20,bottom: 20),
-                            child: Text(quotes[index],style: TextStyle(
+                            padding: const EdgeInsets.only(top: 20,left: 20,bottom: 20),
+                            child: Text(quotes[index],style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black
                             ),),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(bottom: 8),
+                            padding: const EdgeInsets.only(bottom: 8),
                             child: Text(author[index],style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
